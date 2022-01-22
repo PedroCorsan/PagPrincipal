@@ -1,0 +1,145 @@
+body{
+    width: 100%;
+    height: 100%;
+    background: url(../imagen/luna3.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%, 100%;
+    background-attachment: fixed ;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    min-height: 100vh;
+    
+}
+.calendario{
+    position: relative;
+    width: 420px;
+    height: 420px;
+    background: rgb(255, 255, 255, 0.1);
+    
+    border-radius: 10px;
+    backdrop-filter: blur(20px);
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    display: flex;
+}
+.calendario::before{
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 240%;
+    background: linear-gradient(#00ccff,#d400d4);
+    animation: animate 4s linear infinite;
+    filter: blur(10px);
+}
+.calendario::after{
+    content: '';
+    position: absolute;
+    inset: 8px;
+    background:black;
+    border-radius: 20px;
+    filter: blur(10px);
+
+}
+@keyframes animate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(350deg);
+    }
+}
+#dycalendar{
+    width: 100%;
+    padding: 20px; 
+    z-index: 100;
+}
+#dycalendar table{
+    width: 100%;
+    margin-top: 40px;
+    border-spacing: 5px;
+}
+#dycalendar table tr:nth-child(1) td{
+    background: #fff;
+    color: #111;
+    border-radius: 4px;
+    font-weight: 600;
+}
+#dycalendar table td{
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+#dycalendar table td:hover{
+    background-color: #fff !important;
+    color : #111 !important;
+}
+.dycalendar-month-container .dycalendar-today-date,
+.dycalendar-month-container .dycalendar-target-date {
+    background-color: #fff !important;
+    color : #111 !important;
+    border-radius: 2px;
+}
+.dycalendar-month-container .dycalendar-header .dycalendar-prev-next-btn.prev-btn{
+    background: #fff;
+    counter-reset: #111;
+    width: 44px;
+    height: 38px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    left: 4px;
+}
+.dycalendar-month-container .dycalendar-header .dycalendar-prev-next-btn.next-btn{
+    background: #fff;
+    counter-reset: #111;
+    width: 44px;
+    height: 38px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    right: 4px;
+}
+.dycalendar-month-container .dycalendar-span-month-year{
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+@media screen and (max-width:1440px)  {
+    body{
+        min-height: 90vh;
+    }
+}
+@media screen and (max-width:1024px) {
+    body{
+        width: 100%;
+        height: 100%;
+        background: url(../imagen/luna2.jfif);
+        background-repeat: no-repeat;
+        background-size: 100%, 100%;
+        background-attachment: fixed ;
+        min-height: 90vh;
+    }
+}
+@media screen and (max-width:768px) {
+    body{
+        width: 100%;
+        height: 100%;
+        background: url(../imagen/luna2.jfif);
+        background-repeat: no-repeat;
+        background-size: 100%, 100%;
+        background-attachment: fixed ;
+        min-height: 80vh;
+    }
+}
